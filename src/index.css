@@ -99,3 +99,50 @@
     @apply bg-background text-foreground;
   }
 }
+
+@keyframes textAnimation {
+  0% {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes gradientText {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.animate-text {
+  animation: textAnimation 1s ease-in-out;
+}
+
+.scale-on-scroll {
+  transition: transform 0.5s ease-in-out;
+}
+
+.gradient-text {
+  background: linear-gradient(
+    90deg,
+    #1a1f2c 0%,
+    #6E59A5 25%,
+    #9b87f5 50%,
+    #6E59A5 75%,
+    #1a1f2c 100%
+  );
+  background-size: 200% auto;
+  color: transparent;
+  -webkit-background-clip: text;
+  background-clip: text;
+  animation: gradientText 8s linear infinite;
+}
