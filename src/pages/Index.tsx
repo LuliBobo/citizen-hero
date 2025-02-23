@@ -1,27 +1,21 @@
-
 import React, { useEffect, useRef } from 'react';
 import { ArrowRight, Server } from 'lucide-react';
-
 const Index = () => {
   const imageRef = useRef<HTMLImageElement>(null);
-
   useEffect(() => {
     const handleScroll = () => {
       if (imageRef.current) {
         const scrollPosition = window.scrollY;
-        const scale = 0.5 + (scrollPosition / window.innerHeight) * 1.5;
+        const scale = 0.5 + scrollPosition / window.innerHeight * 1.5;
         imageRef.current.style.transform = `scale(${Math.min(scale, 2)})`;
       }
     };
-
     window.addEventListener('scroll', handleScroll);
     return () => {
       window.removeEventListener('scroll', handleScroll);
     };
   }, []);
-
-  return (
-    <div className="min-h-screen bg-white">
+  return <div className="min-h-screen bg-white">
       {/* Navigation */}
       <nav className="fixed w-full bg-white/80 backdrop-blur-sm z-50 border-b">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -34,7 +28,7 @@ const Index = () => {
               <a href="#" className="text-gray-600 hover:text-purple-600">Products</a>
               <a href="#" className="text-gray-600 hover:text-purple-600">Solutions</a>
               <a href="#" className="text-gray-600 hover:text-purple-600">Pricing</a>
-              <a href="#" className="text-gray-600 hover:text-purple-600">Docs</a>
+              
             </div>
             <div className="flex items-center space-x-4">
               <button className="text-gray-600 hover:text-purple-600">Sign in</button>
@@ -67,17 +61,10 @@ const Index = () => {
             </div>
           </div>
           <div className="mt-16">
-            <img 
-              ref={imageRef}
-              src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=80"
-              alt="Dashboard Preview"
-              className="rounded-xl shadow-2xl scale-on-scroll"
-            />
+            <img ref={imageRef} src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=80" alt="Dashboard Preview" className="rounded-xl shadow-2xl scale-on-scroll" />
           </div>
         </div>
       </section>
-    </div>
-  );
+    </div>;
 };
-
 export default Index;
