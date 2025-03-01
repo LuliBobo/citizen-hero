@@ -1,8 +1,10 @@
-import React, { useEffect, useRef } from 'react';
-import { ArrowRight, Server, Check, Cloud, Clock, Users, Shield, Zap, Code, Database, Layout, PenTool } from 'lucide-react';
+import React, { useEffect, useRef, useState } from 'react';
+import { ArrowRight, Server, Check, Cloud, Clock, Users, Shield, Zap, Code, Database, Layout, PenTool, Star, ShoppingCart, Globe, Smartphone, Laptop, ChevronLeft, ChevronRight } from 'lucide-react';
 
 const Index = () => {
   const imageRef = useRef<HTMLImageElement>(null);
+  const [selectedCategory, setSelectedCategory] = useState<string>("all");
+  
   useEffect(() => {
     const handleScroll = () => {
       if (imageRef.current) {
@@ -16,8 +18,75 @@ const Index = () => {
       window.removeEventListener('scroll', handleScroll);
     };
   }, []);
+  
+  const templates = [
+    {
+      id: 1,
+      title: "E-commerce Starter",
+      category: "website",
+      image: "https://images.unsplash.com/photo-1487058792275-0ad4aaf24ca7?auto=format&fit=crop&q=80",
+      rating: 4.8,
+      reviews: 124,
+      price: 49,
+      features: ["Responsive Design", "Product Catalog", "Shopping Cart", "Payment Integration"]
+    },
+    {
+      id: 2,
+      title: "Business Dashboard",
+      category: "application",
+      image: "https://images.unsplash.com/photo-1483058712412-4245e9b90334?auto=format&fit=crop&q=80",
+      rating: 4.6,
+      reviews: 89,
+      price: 79,
+      features: ["Data Visualization", "User Management", "Analytics", "Custom Reports"]
+    },
+    {
+      id: 3,
+      title: "Portfolio Showcase",
+      category: "website",
+      image: "https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?auto=format&fit=crop&q=80",
+      rating: 4.9,
+      reviews: 56,
+      price: 39,
+      features: ["Gallery Layout", "Bio Section", "Contact Form", "Project Showcase"]
+    },
+    {
+      id: 4,
+      title: "Mobile App Builder",
+      category: "application",
+      image: "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?auto=format&fit=crop&q=80",
+      rating: 4.7,
+      reviews: 102,
+      price: 99,
+      features: ["Drag-and-Drop Interface", "Component Library", "Preview Mode", "Export Options"]
+    },
+    {
+      id: 5,
+      title: "Blog Platform",
+      category: "website",
+      image: "https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&q=80",
+      rating: 4.5,
+      reviews: 78,
+      price: 59,
+      features: ["Content Management", "Comment System", "SEO Optimized", "Social Sharing"]
+    },
+    {
+      id: 6,
+      title: "CRM Solution",
+      category: "application",
+      image: "https://images.unsplash.com/photo-1487058792275-0ad4aaf24ca7?auto=format&fit=crop&q=80",
+      rating: 4.8,
+      reviews: 116,
+      price: 129,
+      features: ["Contact Management", "Sales Pipeline", "Task Tracking", "Email Integration"]
+    }
+  ];
+
+  const filteredTemplates = selectedCategory === "all" 
+    ? templates 
+    : templates.filter(template => template.category === selectedCategory);
+
   return <div className="min-h-screen bg-white">
-      {/* Navigation */}
       <nav className="fixed w-full bg-white/80 backdrop-blur-sm z-50 border-b">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center h-16">
@@ -29,7 +98,6 @@ const Index = () => {
               <a href="#" className="text-gray-600 hover:text-purple-600">Products</a>
               <a href="#" className="text-gray-600 hover:text-purple-600">Solutions</a>
               <a href="#" className="text-gray-600 hover:text-purple-600">Pricing</a>
-              
             </div>
             <div className="flex items-center space-x-4">
               <button className="text-gray-600 hover:text-purple-600">Sign in</button>
@@ -41,7 +109,6 @@ const Index = () => {
         </div>
       </nav>
 
-      {/* Hero Section */}
       <section className="pt-32 pb-20 bg-gradient-to-b from-gray-50 to-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
@@ -67,7 +134,6 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Benefits Section */}
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
@@ -163,7 +229,6 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Services Section */}
       <section className="py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
@@ -174,7 +239,6 @@ const Index = () => {
           </div>
           
           <div className="grid md:grid-cols-2 gap-12">
-            {/* Web as Service */}
             <div className="bg-white rounded-xl p-8 shadow-lg hover:shadow-xl transition-shadow">
               <div className="flex items-center mb-6">
                 <div className="bg-purple-100 p-4 rounded-full mr-4">
@@ -234,7 +298,6 @@ const Index = () => {
               </button>
             </div>
             
-            {/* Software as Service */}
             <div className="bg-white rounded-xl p-8 shadow-lg hover:shadow-xl transition-shadow">
               <div className="flex items-center mb-6">
                 <div className="bg-purple-100 p-4 rounded-full mr-4">
@@ -291,6 +354,113 @@ const Index = () => {
               <button className="mt-8 bg-purple-600 text-white px-6 py-3 rounded-lg hover:bg-purple-700 transition-colors flex items-center w-full justify-center md:w-auto">
                 Explore Software Services
                 <ArrowRight className="ml-2 h-5 w-5" />
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="py-20 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl font-bold text-gray-900 mb-4">Ready-to-Use Templates</h2>
+            <p className="text-xl text-gray-600 max-w-2xl mx-auto">
+              Browse our collection of professionally designed templates to kickstart your next project
+            </p>
+          </div>
+
+          <div className="flex justify-center mb-12">
+            <div className="inline-flex p-1 bg-gray-100 rounded-lg">
+              <button 
+                onClick={() => setSelectedCategory("all")}
+                className={`px-6 py-2 rounded-md text-sm font-medium transition-colors ${
+                  selectedCategory === "all" 
+                    ? "bg-purple-600 text-white" 
+                    : "text-gray-700 hover:bg-gray-200"
+                }`}
+              >
+                All Templates
+              </button>
+              <button 
+                onClick={() => setSelectedCategory("website")}
+                className={`px-6 py-2 rounded-md text-sm font-medium transition-colors ${
+                  selectedCategory === "website" 
+                    ? "bg-purple-600 text-white" 
+                    : "text-gray-700 hover:bg-gray-200"
+                }`}
+              >
+                <Globe className="inline mr-1 h-4 w-4" />
+                Websites
+              </button>
+              <button 
+                onClick={() => setSelectedCategory("application")}
+                className={`px-6 py-2 rounded-md text-sm font-medium transition-colors ${
+                  selectedCategory === "application" 
+                    ? "bg-purple-600 text-white" 
+                    : "text-gray-700 hover:bg-gray-200"
+                }`}
+              >
+                <Laptop className="inline mr-1 h-4 w-4" />
+                Applications
+              </button>
+            </div>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {filteredTemplates.map(template => (
+              <div key={template.id} className="bg-white rounded-xl shadow-md hover:shadow-xl transition-shadow overflow-hidden border border-gray-100">
+                <div className="h-48 overflow-hidden">
+                  <img 
+                    src={template.image} 
+                    alt={template.title} 
+                    className="w-full h-full object-cover transition-transform hover:scale-105"
+                  />
+                </div>
+                <div className="p-6">
+                  <div className="flex justify-between items-center mb-3">
+                    <h3 className="text-lg font-semibold text-gray-900">{template.title}</h3>
+                    <span className="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-purple-100 text-purple-800">
+                      {template.category === "website" ? "Website" : "Application"}
+                    </span>
+                  </div>
+                  
+                  <div className="flex items-center mb-4">
+                    <div className="flex items-center">
+                      <Star className="h-4 w-4 text-yellow-400 fill-current" />
+                      <span className="ml-1 text-sm font-medium text-gray-700">{template.rating}</span>
+                    </div>
+                    <span className="text-sm text-gray-500 ml-2">({template.reviews} reviews)</span>
+                  </div>
+                  
+                  <ul className="mb-6 space-y-2">
+                    {template.features.slice(0, 3).map((feature, index) => (
+                      <li key={index} className="flex items-center text-sm text-gray-600">
+                        <Check className="h-4 w-4 text-green-500 mr-2 flex-shrink-0" />
+                        {feature}
+                      </li>
+                    ))}
+                  </ul>
+                  
+                  <div className="flex items-center justify-between">
+                    <span className="text-2xl font-bold text-gray-900">${template.price}</span>
+                    <button className="inline-flex items-center px-4 py-2 bg-purple-600 text-white rounded-lg hover:bg-purple-700 transition-colors">
+                      <ShoppingCart className="h-4 w-4 mr-2" />
+                      Add to Cart
+                    </button>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+          
+          <div className="mt-12 flex justify-center">
+            <div className="inline-flex items-center space-x-2">
+              <button className="p-2 rounded-full bg-gray-100 hover:bg-gray-200 transition-colors">
+                <ChevronLeft className="h-5 w-5 text-gray-600" />
+              </button>
+              <span className="px-4 py-2 text-sm font-medium text-gray-700">Page 1 of 3</span>
+              <button className="p-2 rounded-full bg-gray-100 hover:bg-gray-200 transition-colors">
+                <ChevronRight className="h-5 w-5 text-gray-600" />
               </button>
             </div>
           </div>
