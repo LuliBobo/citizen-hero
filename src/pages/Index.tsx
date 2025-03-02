@@ -116,7 +116,7 @@ const Index = () => {
             </div>
           </div>
           <div className="mt-16">
-            <img ref={imageRef} alt="Dashboard Preview" src="/lovable-uploads/1e7995b5-3727-416c-b64a-423be03ecad2.jpg" className="rounded-xl shadow-5xl scale-on-scroll" />
+            <img ref={imageRef} alt="Dashboard Preview" src="/lovable-uploads/1e7995b5-3727-416c-b64a-423be03ecad2.jpg" className="rounded-xl shadow-5xl scale-on-scroll object-scale-down" />
           </div>
         </div>
       </section>
