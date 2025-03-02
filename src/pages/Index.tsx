@@ -221,6 +221,183 @@ const Index = () => {
         </div>
       </section>
 
+      {/* Benefits Section */}
+      <section className="py-20 bg-purple-50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl font-bold text-gray-900 mb-4">Benefits of Our Services</h2>
+            <p className="text-xl text-gray-600 max-w-2xl mx-auto">
+              Discover how our platform transforms your business through our three core offerings.
+            </p>
+          </div>
+          
+          <div className="grid md:grid-cols-3 gap-8">
+            {/* Web as Service Benefits */}
+            <div className="bg-white rounded-xl p-8 shadow-lg hover:shadow-xl transition-shadow">
+              <div className="flex items-center mb-6">
+                <div className="bg-purple-100 p-4 rounded-full mr-4">
+                  <Layout className="h-8 w-8 text-purple-600" />
+                </div>
+                <h3 className="text-2xl font-semibold">Web as Service</h3>
+              </div>
+              
+              <div className="space-y-5">
+                <div className="flex items-start">
+                  <div className="flex-shrink-0 mt-1">
+                    <Code className="h-5 w-5 text-purple-500" />
+                  </div>
+                  <div className="ml-4">
+                    <h4 className="font-medium text-gray-900">No Coding Required</h4>
+                    <p className="mt-1 text-gray-500">Create professional websites without writing a single line of code.</p>
+                  </div>
+                </div>
+                
+                <div className="flex items-start">
+                  <div className="flex-shrink-0 mt-1">
+                    <Clock className="h-5 w-5 text-purple-500" />
+                  </div>
+                  <div className="ml-4">
+                    <h4 className="font-medium text-gray-900">Rapid Development</h4>
+                    <p className="mt-1 text-gray-500">Launch your website in days instead of months with our intuitive tools.</p>
+                  </div>
+                </div>
+                
+                <div className="flex items-start">
+                  <div className="flex-shrink-0 mt-1">
+                    <PenTool className="h-5 w-5 text-purple-500" />
+                  </div>
+                  <div className="ml-4">
+                    <h4 className="font-medium text-gray-900">Design Flexibility</h4>
+                    <p className="mt-1 text-gray-500">Customize every aspect of your site to match your brand perfectly.</p>
+                  </div>
+                </div>
+                
+                <div className="flex items-start">
+                  <div className="flex-shrink-0 mt-1">
+                    <Cloud className="h-5 w-5 text-purple-500" />
+                  </div>
+                  <div className="ml-4">
+                    <h4 className="font-medium text-gray-900">Reliable Hosting</h4>
+                    <p className="mt-1 text-gray-500">Enjoy 99.9% uptime with automatic scaling to handle traffic surges.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            {/* Software as Service Benefits */}
+            <div className="bg-white rounded-xl p-8 shadow-lg hover:shadow-xl transition-shadow">
+              <div className="flex items-center mb-6">
+                <div className="bg-purple-100 p-4 rounded-full mr-4">
+                  <Database className="h-8 w-8 text-purple-600" />
+                </div>
+                <h3 className="text-2xl font-semibold">Software as Service</h3>
+              </div>
+              
+              <div className="space-y-5">
+                <div className="flex items-start">
+                  <div className="flex-shrink-0 mt-1">
+                    <Zap className="h-5 w-5 text-purple-500" />
+                  </div>
+                  <div className="ml-4">
+                    <h4 className="font-medium text-gray-900">Instant Deployment</h4>
+                    <p className="mt-1 text-gray-500">Get access to business applications immediately without installation.</p>
+                  </div>
+                </div>
+                
+                <div className="flex items-start">
+                  <div className="flex-shrink-0 mt-1">
+                    <Users className="h-5 w-5 text-purple-500" />
+                  </div>
+                  <div className="ml-4">
+                    <h4 className="font-medium text-gray-900">Team Collaboration</h4>
+                    <p className="mt-1 text-gray-500">Enable seamless teamwork with real-time collaborative features.</p>
+                  </div>
+                </div>
+                
+                <div className="flex items-start">
+                  <div className="flex-shrink-0 mt-1">
+                    <Shield className="h-5 w-5 text-purple-500" />
+                  </div>
+                  <div className="ml-4">
+                    <h4 className="font-medium text-gray-900">Enterprise Security</h4>
+                    <p className="mt-1 text-gray-500">Protect sensitive business data with industry-leading security protocols.</p>
+                  </div>
+                </div>
+                
+                <div className="flex items-start">
+                  <div className="flex-shrink-0 mt-1">
+                    <Server className="h-5 w-5 text-purple-500" />
+                  </div>
+                  <div className="ml-4">
+                    <h4 className="font-medium text-gray-900">Automatic Updates</h4>
+                    <p className="mt-1 text-gray-500">Always use the latest version with zero maintenance required from your team.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            {/* AI Agent Benefits */}
+            <div className="bg-white rounded-xl p-8 shadow-lg hover:shadow-xl transition-shadow">
+              <div className="flex items-center mb-6">
+                <div className="bg-purple-100 p-4 rounded-full mr-4">
+                  <Bot className="h-8 w-8 text-purple-600" />
+                </div>
+                <h3 className="text-2xl font-semibold">AI Agent</h3>
+              </div>
+              
+              <div className="space-y-5">
+                <div className="flex items-start">
+                  <div className="flex-shrink-0 mt-1">
+                    <MessageSquare className="h-5 w-5 text-purple-500" />
+                  </div>
+                  <div className="ml-4">
+                    <h4 className="font-medium text-gray-900">Conversational Interface</h4>
+                    <p className="mt-1 text-gray-500">Interact naturally with AI through human-like conversations.</p>
+                  </div>
+                </div>
+                
+                <div className="flex items-start">
+                  <div className="flex-shrink-0 mt-1">
+                    <Clock className="h-5 w-5 text-purple-500" />
+                  </div>
+                  <div className="ml-4">
+                    <h4 className="font-medium text-gray-900">24/7 Availability</h4>
+                    <p className="mt-1 text-gray-500">Get assistance anytime, day or night, without waiting for human response.</p>
+                  </div>
+                </div>
+                
+                <div className="flex items-start">
+                  <div className="flex-shrink-0 mt-1">
+                    <Server className="h-5 w-5 text-purple-500" />
+                  </div>
+                  <div className="ml-4">
+                    <h4 className="font-medium text-gray-900">Process Automation</h4>
+                    <p className="mt-1 text-gray-500">Automate repetitive tasks to free up your team for creative work.</p>
+                  </div>
+                </div>
+                
+                <div className="flex items-start">
+                  <div className="flex-shrink-0 mt-1">
+                    <Zap className="h-5 w-5 text-purple-500" />
+                  </div>
+                  <div className="ml-4">
+                    <h4 className="font-medium text-gray-900">Adaptive Learning</h4>
+                    <p className="mt-1 text-gray-500">AI continuously improves based on interactions, getting smarter over time.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <div className="mt-12 text-center">
+            <a href="#" className="inline-flex items-center px-6 py-3 bg-purple-600 text-white font-medium rounded-lg hover:bg-purple-700 transition-colors">
+              Learn more about our benefits
+              <ArrowRight className="ml-2 h-5 w-5" />
+            </a>
+          </div>
+        </div>
+      </section>
+
       <section className="py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
@@ -428,163 +605,4 @@ const Index = () => {
                   </div>
                   
                   <ul className="mb-6 space-y-2">
-                    {template.features.slice(0, 3).map((feature, index) => <li key={index} className="flex items-center text-sm text-gray-600">
-                        <Check className="h-4 w-4 text-green-500 mr-2 flex-shrink-0" />
-                        {feature}
-                      </li>)}
-                  </ul>
-                  
-                  <div className="flex items-center justify-between">
-                    <span className="text-2xl font-bold text-gray-900">${template.price}</span>
-                    <button className="inline-flex items-center px-4 py-2 bg-purple-600 text-white rounded-lg hover:bg-purple-700 transition-colors">
-                      <ShoppingCart className="h-4 w-4 mr-2" />
-                      Add to Cart
-                    </button>
-                  </div>
-                </div>
-              </div>)}
-          </div>
-          
-          <div className="mt-12 flex justify-center">
-            <div className="inline-flex items-center space-x-2">
-              <button className="p-2 rounded-full bg-gray-100 hover:bg-gray-200 transition-colors">
-                <ChevronLeft className="h-5 w-5 text-gray-600" />
-              </button>
-              <span className="px-4 py-2 text-sm font-medium text-gray-700">Page 1 of 3</span>
-              <button className="p-2 rounded-full bg-gray-100 hover:bg-gray-200 transition-colors">
-                <ChevronRight className="h-5 w-5 text-gray-600" />
-              </button>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section className="py-24 bg-gradient-to-b from-white to-purple-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
-            <h2 className="text-4xl font-bold text-gray-900 mb-6">Ready to Transform Your Ideas?</h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Join thousands of citizen developers who have already launched their projects without writing a single line of code.
-            </p>
-          </div>
-          
-          <div className="grid md:grid-cols-3 gap-8 mb-16">
-            <div className="bg-white rounded-xl p-8 shadow-lg hover:shadow-xl transition-all transform hover:-translate-y-1 text-center">
-              <div className="bg-purple-100 p-4 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-6">
-                <Rocket className="h-8 w-8 text-purple-600" />
-              </div>
-              <h3 className="text-xl font-semibold mb-3">Launch Quickly</h3>
-              <p className="text-gray-600">
-                Deploy your first project within hours, not weeks. Our platform streamlines the entire development process.
-              </p>
-            </div>
-            
-            <div className="bg-white rounded-xl p-8 shadow-lg hover:shadow-xl transition-all transform hover:-translate-y-1 text-center">
-              <div className="bg-purple-100 p-4 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-6">
-                <MessageSquare className="h-8 w-8 text-purple-600" />
-              </div>
-              <h3 className="text-xl font-semibold mb-3">Expert Support</h3>
-              <p className="text-gray-600">
-                Get guidance every step of the way from our team of experts who are dedicated to your success.
-              </p>
-            </div>
-            
-            <div className="bg-white rounded-xl p-8 shadow-lg hover:shadow-xl transition-all transform hover:-translate-y-1 text-center">
-              <div className="bg-purple-100 p-4 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-6">
-                <Shield className="h-8 w-8 text-purple-600" />
-              </div>
-              <h3 className="text-xl font-semibold mb-3">Enterprise Ready</h3>
-              <p className="text-gray-600">
-                Scale with confidence using our enterprise-grade security and performance features.
-              </p>
-            </div>
-          </div>
-          
-          <div className="bg-purple-600 rounded-2xl overflow-hidden shadow-xl">
-            <div className="grid md:grid-cols-2">
-              <div className="p-10 md:p-12 flex flex-col justify-center">
-                <h3 className="text-2xl md:text-3xl font-bold text-white mb-4">Start Building Your Solution Today</h3>
-                <p className="text-purple-100 mb-8">
-                  No technical skills required. Begin creating powerful web applications and websites in minutes.
-                </p>
-                <div className="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4">
-                  <button className="bg-white text-purple-600 px-8 py-3 rounded-lg hover:bg-gray-100 transition-colors flex items-center justify-center font-medium">
-                    Start for free
-                    <ArrowRight className="ml-2 h-5 w-5" />
-                  </button>
-                  <button className="border border-purple-300 text-white px-8 py-3 rounded-lg hover:bg-purple-700 transition-colors flex items-center justify-center font-medium">
-                    <Send className="mr-2 h-5 w-5" />
-                    Contact sales
-                  </button>
-                </div>
-              </div>
-              <div className="hidden md:block relative">
-                <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=80" alt="CitizenDeveloperApp Demo" className="object-cover w-full h-full" />
-                <div className="absolute inset-0 bg-gradient-to-r from-purple-600/80 to-transparent"></div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <FAQ />
-
-      <footer className="bg-gray-900 text-white py-12">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-            <div>
-              <h3 className="text-lg font-semibold mb-4">Product</h3>
-              <ul className="space-y-2">
-                <li><a href="#" className="text-gray-400 hover:text-white transition-colors">Features</a></li>
-                <li><a href="#" className="text-gray-400 hover:text-white transition-colors">Pricing</a></li>
-                <li><a href="#" className="text-gray-400 hover:text-white transition-colors">Templates</a></li>
-                <li><a href="#" className="text-gray-400 hover:text-white transition-colors">Integrations</a></li>
-              </ul>
-            </div>
-            
-            <div>
-              <h3 className="text-lg font-semibold mb-4">Resources</h3>
-              <ul className="space-y-2">
-                <li><a href="#" className="text-gray-400 hover:text-white transition-colors">Documentation</a></li>
-                <li><a href="#" className="text-gray-400 hover:text-white transition-colors">Tutorials</a></li>
-                <li><a href="#" className="text-gray-400 hover:text-white transition-colors">Blog</a></li>
-                <li><a href="#" className="text-gray-400 hover:text-white transition-colors">Community</a></li>
-              </ul>
-            </div>
-            
-            <div>
-              <h3 className="text-lg font-semibold mb-4">Company</h3>
-              <ul className="space-y-2">
-                <li><a href="#" className="text-gray-400 hover:text-white transition-colors">About</a></li>
-                <li><a href="#" className="text-gray-400 hover:text-white transition-colors">Careers</a></li>
-                <li><a href="#" className="text-gray-400 hover:text-white transition-colors">Contact</a></li>
-                <li><a href="#" className="text-gray-400 hover:text-white transition-colors">Partners</a></li>
-              </ul>
-            </div>
-            
-            <div>
-              <h3 className="text-lg font-semibold mb-4">Legal</h3>
-              <ul className="space-y-2">
-                <li><a href="#" className="text-gray-400 hover:text-white transition-colors">Privacy</a></li>
-                <li><a href="#" className="text-gray-400 hover:text-white transition-colors">Terms</a></li>
-                <li><a href="#" className="text-gray-400 hover:text-white transition-colors">Security</a></li>
-                <li><a href="#" className="text-gray-400 hover:text-white transition-colors">Cookies</a></li>
-              </ul>
-            </div>
-          </div>
-          
-          <div className="mt-12 pt-8 border-t border-gray-800 flex flex-col md:flex-row justify-between items-center">
-            <div className="flex items-center mb-4 md:mb-0">
-              <Server className="h-8 w-8 text-purple-400" />
-              <span className="ml-2 text-xl font-bold">CitizenDeveloperApp</span>
-            </div>
-            <div className="text-gray-400">
-              © {new Date().getFullYear()} CitizenDeveloperApp. All rights reserved.
-            </div>
-          </div>
-        </div>
-      </footer>
-    </div>;
-};
-
-export default Index;
+                    {template.features.slice(
