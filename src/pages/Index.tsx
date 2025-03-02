@@ -1,5 +1,6 @@
 import React, { useEffect, useRef, useState } from 'react';
 import { ArrowRight, Server, Check, Cloud, Clock, Users, Shield, Zap, Code, Database, Layout, PenTool, Star, ShoppingCart, Globe, Smartphone, Laptop, ChevronLeft, ChevronRight, Send, Rocket, MessageSquare } from 'lucide-react';
+import FAQ from '../components/FAQ';
 
 const Index = () => {
   const imageRef = useRef<HTMLImageElement>(null);
@@ -538,6 +539,8 @@ const Index = () => {
           </div>
         </div>
       </section>
+
+      <FAQ />
 
       <footer className="bg-gray-900 text-white py-12">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
