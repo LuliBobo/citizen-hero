@@ -1,11 +1,9 @@
 import React, { useEffect, useRef, useState } from 'react';
 import { ArrowRight, Server, Check, Cloud, Clock, Users, Shield, Zap, Code, Database, Layout, PenTool, Star, ShoppingCart, Globe, Smartphone, Laptop, ChevronLeft, ChevronRight, Send, Rocket, MessageSquare } from 'lucide-react';
 import FAQ from '../components/FAQ';
-
 const Index = () => {
   const imageRef = useRef<HTMLImageElement>(null);
   const [selectedCategory, setSelectedCategory] = useState<string>("all");
-  
   useEffect(() => {
     const handleScroll = () => {
       if (imageRef.current) {
@@ -19,74 +17,62 @@ const Index = () => {
       window.removeEventListener('scroll', handleScroll);
     };
   }, []);
-  
-  const templates = [
-    {
-      id: 1,
-      title: "E-commerce Starter",
-      category: "website",
-      image: "https://images.unsplash.com/photo-1487058792275-0ad4aaf24ca7?auto=format&fit=crop&q=80",
-      rating: 4.8,
-      reviews: 124,
-      price: 49,
-      features: ["Responsive Design", "Product Catalog", "Shopping Cart", "Payment Integration"]
-    },
-    {
-      id: 2,
-      title: "Business Dashboard",
-      category: "application",
-      image: "https://images.unsplash.com/photo-1483058712412-4245e9b90334?auto=format&fit=crop&q=80",
-      rating: 4.6,
-      reviews: 89,
-      price: 79,
-      features: ["Data Visualization", "User Management", "Analytics", "Custom Reports"]
-    },
-    {
-      id: 3,
-      title: "Portfolio Showcase",
-      category: "website",
-      image: "https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?auto=format&fit=crop&q=80",
-      rating: 4.9,
-      reviews: 56,
-      price: 39,
-      features: ["Gallery Layout", "Bio Section", "Contact Form", "Project Showcase"]
-    },
-    {
-      id: 4,
-      title: "Mobile App Builder",
-      category: "application",
-      image: "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?auto=format&fit=crop&q=80",
-      rating: 4.7,
-      reviews: 102,
-      price: 99,
-      features: ["Drag-and-Drop Interface", "Component Library", "Preview Mode", "Export Options"]
-    },
-    {
-      id: 5,
-      title: "Blog Platform",
-      category: "website",
-      image: "https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&q=80",
-      rating: 4.5,
-      reviews: 78,
-      price: 59,
-      features: ["Content Management", "Comment System", "SEO Optimized", "Social Sharing"]
-    },
-    {
-      id: 6,
-      title: "CRM Solution",
-      category: "application",
-      image: "https://images.unsplash.com/photo-1487058792275-0ad4aaf24ca7?auto=format&fit=crop&q=80",
-      rating: 4.8,
-      reviews: 116,
-      price: 129,
-      features: ["Contact Management", "Sales Pipeline", "Task Tracking", "Email Integration"]
-    }
-  ];
-
-  const filteredTemplates = selectedCategory === "all" 
-    ? templates 
-    : templates.filter(template => template.category === selectedCategory);
-
+  const templates = [{
+    id: 1,
+    title: "E-commerce Starter",
+    category: "website",
+    image: "https://images.unsplash.com/photo-1487058792275-0ad4aaf24ca7?auto=format&fit=crop&q=80",
+    rating: 4.8,
+    reviews: 124,
+    price: 49,
+    features: ["Responsive Design", "Product Catalog", "Shopping Cart", "Payment Integration"]
+  }, {
+    id: 2,
+    title: "Business Dashboard",
+    category: "application",
+    image: "https://images.unsplash.com/photo-1483058712412-4245e9b90334?auto=format&fit=crop&q=80",
+    rating: 4.6,
+    reviews: 89,
+    price: 79,
+    features: ["Data Visualization", "User Management", "Analytics", "Custom Reports"]
+  }, {
+    id: 3,
+    title: "Portfolio Showcase",
+    category: "website",
+    image: "https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?auto=format&fit=crop&q=80",
+    rating: 4.9,
+    reviews: 56,
+    price: 39,
+    features: ["Gallery Layout", "Bio Section", "Contact Form", "Project Showcase"]
+  }, {
+    id: 4,
+    title: "Mobile App Builder",
+    category: "application",
+    image: "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?auto=format&fit=crop&q=80",
+    rating: 4.7,
+    reviews: 102,
+    price: 99,
+    features: ["Drag-and-Drop Interface", "Component Library", "Preview Mode", "Export Options"]
+  }, {
+    id: 5,
+    title: "Blog Platform",
+    category: "website",
+    image: "https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&q=80",
+    rating: 4.5,
+    reviews: 78,
+    price: 59,
+    features: ["Content Management", "Comment System", "SEO Optimized", "Social Sharing"]
+  }, {
+    id: 6,
+    title: "CRM Solution",
+    category: "application",
+    image: "https://images.unsplash.com/photo-1487058792275-0ad4aaf24ca7?auto=format&fit=crop&q=80",
+    rating: 4.8,
+    reviews: 116,
+    price: 129,
+    features: ["Contact Management", "Sales Pipeline", "Task Tracking", "Email Integration"]
+  }];
+  const filteredTemplates = selectedCategory === "all" ? templates : templates.filter(template => template.category === selectedCategory);
   return <div className="min-h-screen bg-white">
       <nav className="fixed w-full bg-white/80 backdrop-blur-sm z-50 border-b">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -130,7 +116,7 @@ const Index = () => {
             </div>
           </div>
           <div className="mt-16">
-            <img ref={imageRef} src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=80" alt="Dashboard Preview" className="rounded-xl shadow-2xl scale-on-scroll" />
+            <img ref={imageRef} alt="Dashboard Preview" src="/lovable-uploads/1e7995b5-3727-416c-b64a-423be03ecad2.jpg" className="rounded-xl shadow-5xl scale-on-scroll" />
           </div>
         </div>
       </section>
@@ -372,35 +358,14 @@ const Index = () => {
 
           <div className="flex justify-center mb-12">
             <div className="inline-flex p-1 bg-gray-100 rounded-lg">
-              <button 
-                onClick={() => setSelectedCategory("all")}
-                className={`px-6 py-2 rounded-md text-sm font-medium transition-colors ${
-                  selectedCategory === "all" 
-                    ? "bg-purple-600 text-white" 
-                    : "text-gray-700 hover:bg-gray-200"
-                }`}
-              >
+              <button onClick={() => setSelectedCategory("all")} className={`px-6 py-2 rounded-md text-sm font-medium transition-colors ${selectedCategory === "all" ? "bg-purple-600 text-white" : "text-gray-700 hover:bg-gray-200"}`}>
                 All Templates
               </button>
-              <button 
-                onClick={() => setSelectedCategory("website")}
-                className={`px-6 py-2 rounded-md text-sm font-medium transition-colors ${
-                  selectedCategory === "website" 
-                    ? "bg-purple-600 text-white" 
-                    : "text-gray-700 hover:bg-gray-200"
-                }`}
-              >
+              <button onClick={() => setSelectedCategory("website")} className={`px-6 py-2 rounded-md text-sm font-medium transition-colors ${selectedCategory === "website" ? "bg-purple-600 text-white" : "text-gray-700 hover:bg-gray-200"}`}>
                 <Globe className="inline mr-1 h-4 w-4" />
                 Websites
               </button>
-              <button 
-                onClick={() => setSelectedCategory("application")}
-                className={`px-6 py-2 rounded-md text-sm font-medium transition-colors ${
-                  selectedCategory === "application" 
-                    ? "bg-purple-600 text-white" 
-                    : "text-gray-700 hover:bg-gray-200"
-                }`}
-              >
+              <button onClick={() => setSelectedCategory("application")} className={`px-6 py-2 rounded-md text-sm font-medium transition-colors ${selectedCategory === "application" ? "bg-purple-600 text-white" : "text-gray-700 hover:bg-gray-200"}`}>
                 <Laptop className="inline mr-1 h-4 w-4" />
                 Applications
               </button>
@@ -408,14 +373,9 @@ const Index = () => {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {filteredTemplates.map(template => (
-              <div key={template.id} className="bg-white rounded-xl shadow-md hover:shadow-xl transition-shadow overflow-hidden border border-gray-100">
+            {filteredTemplates.map(template => <div key={template.id} className="bg-white rounded-xl shadow-md hover:shadow-xl transition-shadow overflow-hidden border border-gray-100">
                 <div className="h-48 overflow-hidden">
-                  <img 
-                    src={template.image} 
-                    alt={template.title} 
-                    className="w-full h-full object-cover transition-transform hover:scale-105"
-                  />
+                  <img src={template.image} alt={template.title} className="w-full h-full object-cover transition-transform hover:scale-105" />
                 </div>
                 <div className="p-6">
                   <div className="flex justify-between items-center mb-3">
@@ -434,12 +394,10 @@ const Index = () => {
                   </div>
                   
                   <ul className="mb-6 space-y-2">
-                    {template.features.slice(0, 3).map((feature, index) => (
-                      <li key={index} className="flex items-center text-sm text-gray-600">
+                    {template.features.slice(0, 3).map((feature, index) => <li key={index} className="flex items-center text-sm text-gray-600">
                         <Check className="h-4 w-4 text-green-500 mr-2 flex-shrink-0" />
                         {feature}
-                      </li>
-                    ))}
+                      </li>)}
                   </ul>
                   
                   <div className="flex items-center justify-between">
@@ -450,8 +408,7 @@ const Index = () => {
                     </button>
                   </div>
                 </div>
-              </div>
-            ))}
+              </div>)}
           </div>
           
           <div className="mt-12 flex justify-center">
@@ -528,11 +485,7 @@ const Index = () => {
                 </div>
               </div>
               <div className="hidden md:block relative">
-                <img 
-                  src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=80" 
-                  alt="CitizenDeveloperApp Demo" 
-                  className="object-cover w-full h-full"
-                />
+                <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=80" alt="CitizenDeveloperApp Demo" className="object-cover w-full h-full" />
                 <div className="absolute inset-0 bg-gradient-to-r from-purple-600/80 to-transparent"></div>
               </div>
             </div>
