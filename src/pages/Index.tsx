@@ -1,5 +1,5 @@
 import React, { useEffect, useRef, useState } from 'react';
-import { ArrowRight, Server, Check, Cloud, Clock, Users, Shield, Zap, Code, Database, Layout, PenTool, Star, ShoppingCart, Globe, Smartphone, Laptop, ChevronLeft, ChevronRight, Send, RocketLaunch, MessageSquare } from 'lucide-react';
+import { ArrowRight, Server, Check, Cloud, Clock, Users, Shield, Zap, Code, Database, Layout, PenTool, Star, ShoppingCart, Globe, Smartphone, Laptop, ChevronLeft, ChevronRight, Send, Rocket, MessageSquare } from 'lucide-react';
 
 const Index = () => {
   const imageRef = useRef<HTMLImageElement>(null);
@@ -479,7 +479,7 @@ const Index = () => {
           <div className="grid md:grid-cols-3 gap-8 mb-16">
             <div className="bg-white rounded-xl p-8 shadow-lg hover:shadow-xl transition-all transform hover:-translate-y-1 text-center">
               <div className="bg-purple-100 p-4 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-6">
-                <RocketLaunch className="h-8 w-8 text-purple-600" />
+                <Rocket className="h-8 w-8 text-purple-600" />
               </div>
               <h3 className="text-xl font-semibold mb-3">Launch Quickly</h3>
               <p className="text-gray-600">
