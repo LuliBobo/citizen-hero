@@ -143,7 +143,7 @@ const Index = () => {
             </p>
           </div>
           
-          <div className="grid md:grid-cols-2 gap-10 mb-16">
+          <div className="grid md:grid-cols-3 gap-10 mb-16">
             <div className="bg-gray-50 rounded-xl p-8 shadow-sm hover:shadow-md transition-shadow">
               <div className="flex items-center mb-4">
                 <div className="bg-purple-100 p-3 rounded-lg mr-4">
@@ -196,6 +196,34 @@ const Index = () => {
                 <li className="flex items-start">
                   <Check className="h-5 w-5 text-green-500 mr-2 mt-0.5 flex-shrink-0" />
                   <span className="text-gray-700">Workflow automation tools</span>
+                </li>
+              </ul>
+            </div>
+            
+            <div className="bg-gray-50 rounded-xl p-8 shadow-sm hover:shadow-md transition-shadow">
+              <div className="flex items-center mb-4">
+                <div className="bg-purple-100 p-3 rounded-lg mr-4">
+                  <Bot className="h-6 w-6 text-purple-600" />
+                </div>
+                <h3 className="text-xl font-semibold">AI Agent</h3>
+              </div>
+              <p className="text-gray-600 mb-6">Leverage intelligent AI agents to automate tasks, provide insights, and enhance decision-making across your organization.</p>
+              <ul className="space-y-3">
+                <li className="flex items-start">
+                  <Check className="h-5 w-5 text-green-500 mr-2 mt-0.5 flex-shrink-0" />
+                  <span className="text-gray-700">Natural language processing capabilities</span>
+                </li>
+                <li className="flex items-start">
+                  <Check className="h-5 w-5 text-green-500 mr-2 mt-0.5 flex-shrink-0" />
+                  <span className="text-gray-700">Custom AI assistants for specific tasks</span>
+                </li>
+                <li className="flex items-start">
+                  <Check className="h-5 w-5 text-green-500 mr-2 mt-0.5 flex-shrink-0" />
+                  <span className="text-gray-700">Data analysis and pattern recognition</span>
+                </li>
+                <li className="flex items-start">
+                  <Check className="h-5 w-5 text-green-500 mr-2 mt-0.5 flex-shrink-0" />
+                  <span className="text-gray-700">Continuous learning and improvement</span>
                 </li>
               </ul>
             </div>
