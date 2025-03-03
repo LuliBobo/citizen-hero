@@ -1,8 +1,10 @@
+
 import React, { useEffect, useRef, useState } from 'react';
 import { ArrowRight, Server, Check, Cloud, Clock, Users, Shield, Zap, Code, Database, Layout, PenTool, Star, ShoppingCart, Globe, Smartphone, Laptop, ChevronLeft, ChevronRight, Send, Rocket, MessageSquare, Bot, Quote } from 'lucide-react';
 import FAQ from '../components/FAQ';
 import Testimonials from '../components/Testimonials';
 import ContactForm from '../components/ContactForm';
+import Footer from '../components/Footer';
 
 const Index = () => {
   const imageRef = useRef<HTMLImageElement>(null);
@@ -654,6 +656,9 @@ const Index = () => {
 
       {/* FAQ Section */}
       <FAQ />
+      
+      {/* Footer */}
+      <Footer />
     </div>
   );
 };
