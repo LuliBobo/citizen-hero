@@ -1,3 +1,4 @@
+
 import React, { useEffect, useRef, useState } from 'react';
 import { ArrowRight, Server, Check, Cloud, Clock, Users, Shield, Zap, Code, Database, Layout, PenTool, Star, ShoppingCart, Globe, Smartphone, Laptop, ChevronLeft, ChevronRight, Send, Rocket, MessageSquare, Bot } from 'lucide-react';
 import FAQ from '../components/FAQ';
@@ -78,7 +79,9 @@ const Index = () => {
 
   const filteredTemplates = selectedCategory === "all" ? templates : templates.filter(template => template.category === selectedCategory);
 
-  return <div className="min-h-screen bg-white">
+  return (
+    <div className="min-h-screen bg-white">
+      {/* Navigation */}
       <nav className="fixed w-full bg-white/80 backdrop-blur-sm z-50 border-b">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center h-16">
@@ -101,6 +104,7 @@ const Index = () => {
         </div>
       </nav>
 
+      {/* Hero Section */}
       <section className="pt-32 pb-20 bg-gradient-to-b from-gray-50 to-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
@@ -126,6 +130,7 @@ const Index = () => {
         </div>
       </section>
 
+      {/* Why Choose Section */}
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
@@ -398,6 +403,7 @@ const Index = () => {
         </div>
       </section>
 
+      {/* Services Section */}
       <section className="py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
@@ -558,6 +564,7 @@ const Index = () => {
         </div>
       </section>
 
+      {/* Templates Section */}
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
@@ -584,7 +591,8 @@ const Index = () => {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {filteredTemplates.map(template => <div key={template.id} className="bg-white rounded-xl shadow-md hover:shadow-xl transition-shadow overflow-hidden border border-gray-100">
+            {filteredTemplates.map(template => (
+              <div key={template.id} className="bg-white rounded-xl shadow-md hover:shadow-xl transition-shadow overflow-hidden border border-gray-100">
                 <div className="h-48 overflow-hidden">
                   <img src={template.image} alt={template.title} className="w-full h-full object-cover transition-transform hover:scale-105" />
                 </div>
@@ -605,4 +613,31 @@ const Index = () => {
                   </div>
                   
                   <ul className="mb-6 space-y-2">
-                    {template.features.slice(
+                    {template.features.map((feature, idx) => (
+                      <li key={idx} className="flex items-start">
+                        <Check className="h-4 w-4 text-green-500 mr-2 mt-0.5" />
+                        <span className="text-sm text-gray-700">{feature}</span>
+                      </li>
+                    ))}
+                  </ul>
+                  
+                  <div className="flex items-center justify-between">
+                    <span className="text-xl font-bold text-purple-700">${template.price}</span>
+                    <button className="bg-purple-100 text-purple-700 px-4 py-2 rounded-lg hover:bg-purple-200 transition-colors">
+                      View Details
+                    </button>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* FAQ Section */}
+      <FAQ />
+    </div>
+  );
+};
+
+export default Index;
