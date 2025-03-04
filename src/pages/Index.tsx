@@ -1,4 +1,3 @@
-
 import React, { useEffect, useRef, useState } from 'react';
 import { ArrowRight, Server, Check, Cloud, Clock, Users, Shield, Zap, Code, Database, Layout, PenTool, Star, ShoppingCart, Globe, Smartphone, Laptop, ChevronLeft, ChevronRight, Send, Rocket, MessageSquare, Bot, Quote } from 'lucide-react';
 import FAQ from '../components/FAQ';
@@ -8,6 +7,7 @@ import Footer from '../components/Footer';
 
 const Index = () => {
   const imageRef = useRef<HTMLImageElement>(null);
+  const templatesRef = useRef<HTMLDivElement>(null);
   const [selectedCategory, setSelectedCategory] = useState<string>("all");
 
   useEffect(() => {
@@ -23,6 +23,10 @@ const Index = () => {
       window.removeEventListener('scroll', handleScroll);
     };
   }, []);
+
+  const scrollToTemplates = () => {
+    templatesRef.current?.scrollIntoView({ behavior: 'smooth' });
+  };
 
   const templates = [{
     id: 1,
@@ -93,7 +97,10 @@ const Index = () => {
               <span className="ml-2 text-xl font-bold">CitizenDeveloperApp</span>
             </div>
             <div className="hidden md:flex items-center space-x-8">
-              <a href="#" className="text-gray-600 hover:text-purple-600">Products</a>
+              <a href="#" onClick={(e) => {
+                e.preventDefault();
+                scrollToTemplates();
+              }} className="text-gray-600 hover:text-purple-600">Products</a>
               <a href="#" className="text-gray-600 hover:text-purple-600">Solutions</a>
               <a href="#" className="text-gray-600 hover:text-purple-600">Pricing</a>
             </div>
@@ -613,7 +620,7 @@ const Index = () => {
       </section>
 
       {/* Templates Section */}
-      <section className="py-20 bg-white">
+      <section ref={templatesRef} className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-3xl font-bold text-gray-900 mb-4">Ready-to-Use Templates</h2>
