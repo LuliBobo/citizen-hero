@@ -4,9 +4,10 @@ import { Server } from 'lucide-react';
 
 type NavigationProps = {
   scrollToTemplates: () => void;
+  scrollToServices: () => void;
 };
 
-const Navigation = ({ scrollToTemplates }: NavigationProps) => {
+const Navigation = ({ scrollToTemplates, scrollToServices }: NavigationProps) => {
   return (
     <nav className="fixed w-full bg-white/80 backdrop-blur-sm z-50 border-b">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -18,7 +19,7 @@ const Navigation = ({ scrollToTemplates }: NavigationProps) => {
           <div className="hidden md:flex items-center space-x-8">
             <a href="#" onClick={(e) => {
               e.preventDefault();
-              scrollToTemplates();
+              scrollToServices();
             }} className="text-gray-600 hover:text-purple-600">Products</a>
             <a href="#" className="text-gray-600 hover:text-purple-600">Solutions</a>
             <a href="#" className="text-gray-600 hover:text-purple-600">Pricing</a>

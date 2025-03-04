@@ -1,3 +1,4 @@
+
 import React, { useEffect, useRef, useState } from 'react';
 import Navigation from '../components/Navigation';
 import HeroSection from '../components/HeroSection';
@@ -13,6 +14,7 @@ import Footer from '../components/Footer';
 const Index = () => {
   const imageRef = useRef<HTMLImageElement>(null);
   const templatesRef = useRef<HTMLDivElement>(null);
+  const servicesRef = useRef<HTMLDivElement>(null);
   const [selectedCategory, setSelectedCategory] = useState<string>("all");
 
   useEffect(() => {
@@ -31,6 +33,10 @@ const Index = () => {
 
   const scrollToTemplates = () => {
     templatesRef.current?.scrollIntoView({ behavior: 'smooth' });
+  };
+
+  const scrollToServices = () => {
+    servicesRef.current?.scrollIntoView({ behavior: 'smooth' });
   };
 
   const templates = [{
@@ -91,10 +97,13 @@ const Index = () => {
 
   return (
     <div className="min-h-screen bg-white">
-      <Navigation scrollToTemplates={scrollToTemplates} />
+      <Navigation 
+        scrollToTemplates={scrollToTemplates}
+        scrollToServices={scrollToServices}
+      />
       <HeroSection imageRef={imageRef} />
       <WhyChooseSection />
-      <BenefitsSection />
+      <BenefitsSection ref={servicesRef} />
       <ServicesSection />
       <Testimonials />
       <ContactSection />
