@@ -8,11 +8,28 @@ type NavigationProps = {
 };
 
 const Navigation = ({ scrollToTemplates, scrollToServices }: NavigationProps) => {
+  const scrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth'
+    });
+  };
+
   return (
     <nav className="fixed w-full bg-white/80 backdrop-blur-sm z-50 border-b">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
-          <div className="flex items-center">
+          <div 
+            className="flex items-center cursor-pointer" 
+            onClick={scrollToTop}
+            role="button"
+            tabIndex={0}
+            onKeyDown={(e) => {
+              if (e.key === 'Enter' || e.key === ' ') {
+                scrollToTop();
+              }
+            }}
+          >
             <Server className="h-8 w-8 text-purple-600" />
             <span className="ml-2 text-xl font-bold">CitizenDeveloperApp</span>
           </div>
