@@ -5,6 +5,7 @@ import HeroSection from '../components/HeroSection';
 import WhyChooseSection from '../components/WhyChooseSection';
 import BenefitsSection from '../components/BenefitsSection';
 import ServicesSection from '../components/ServicesSection';
+import AboutUsSection from '../components/AboutUsSection';
 import Testimonials from '../components/Testimonials';
 import ContactSection from '../components/ContactSection';
 import TemplatesSection from '../components/TemplatesSection';
@@ -103,6 +104,7 @@ const Index = () => {
       />
       <HeroSection imageRef={imageRef} />
       <WhyChooseSection />
+      <AboutUsSection />
       <BenefitsSection ref={servicesRef} />
       <ServicesSection />
       <Testimonials />
