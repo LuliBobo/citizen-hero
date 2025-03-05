@@ -21,8 +21,17 @@ const Navigation = ({ scrollToTemplates, scrollToServices }: NavigationProps) =>
               e.preventDefault();
               scrollToServices();
             }} className="text-gray-600 hover:text-purple-600">Products</a>
-            <a href="#" className="text-gray-600 hover:text-purple-600">Solutions</a>
-            <a href="#" className="text-gray-600 hover:text-purple-600">Pricing</a>
+            <a href="#" onClick={(e) => {
+              e.preventDefault();
+              window.scrollTo({
+                top: document.querySelector('.py-20.bg-gray-50')?.getBoundingClientRect().top + window.scrollY - 80,
+                behavior: 'smooth'
+              });
+            }} className="text-gray-600 hover:text-purple-600">Solutions</a>
+            <a href="#" onClick={(e) => {
+              e.preventDefault();
+              scrollToTemplates();
+            }} className="text-gray-600 hover:text-purple-600">Pricing</a>
           </div>
           <div className="flex items-center space-x-4">
             <button className="text-gray-600 hover:text-purple-600">Sign in</button>
