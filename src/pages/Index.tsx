@@ -1,10 +1,10 @@
-
 import React, { useEffect, useRef, useState } from 'react';
 import { ArrowRight, Server, Check, Cloud, Clock, Users, Shield, Zap, Code, Database, Layout, PenTool, Star, ShoppingCart, Globe, Smartphone, Laptop, ChevronLeft, ChevronRight, Send, Rocket, MessageSquare, Bot, Quote } from 'lucide-react';
 import FAQ from '../components/FAQ';
 import Testimonials from '../components/Testimonials';
 import ContactForm from '../components/ContactForm';
 import Footer from '../components/Footer';
+import AboutUs from '../components/AboutUs';
 
 const Index = () => {
   const imageRef = useRef<HTMLImageElement>(null);
@@ -256,6 +256,9 @@ const Index = () => {
           </div>
         </div>
       </section>
+
+      {/* About Us Section */}
+      <AboutUs />
 
       {/* Benefits Section */}
       <section className="py-20 bg-purple-50">
