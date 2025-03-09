@@ -1,27 +1,26 @@
-
 import React from 'react';
 import { Cloud, Zap, Bot, Check, Clock, Users, Shield } from 'lucide-react';
 
 const WhyChooseSection = () => {
   return (
-    <section className="py-20 bg-white">
+    <section className="py-20 bg-[#7D8F69]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
-          <h2 className="text-3xl font-bold text-gray-900 mb-4">Why Choose CitizenDeveloperApp</h2>
-          <p className="text-xl text-gray-600 max-w-2xl mx-auto">
+          <h2 className="text-3xl font-bold text-white mb-4">Why Choose CitizenDeveloperApp</h2>
+          <p className="text-xl text-gray-100 max-w-2xl mx-auto">
             Our platform provides powerful Web as Service and Software as Service solutions that empower citizen developers.
           </p>
         </div>
         
         <div className="grid md:grid-cols-3 gap-10 mb-16">
-          <div className="bg-gray-50 rounded-xl p-8 shadow-sm hover:shadow-md transition-shadow">
+          <div className="bg-[#A4BE7B] rounded-xl p-8 shadow-sm hover:shadow-md transition-shadow">
             <div className="flex items-center mb-4">
-              <div className="bg-purple-100 p-3 rounded-lg mr-4">
-                <Cloud className="h-6 w-6 text-purple-600" />
+              <div className="bg-[#E5D9B6] p-3 rounded-lg mr-4">
+                <Cloud className="h-6 w-6 text-[#5F8D4E]" />
               </div>
-              <h3 className="text-xl font-semibold">Web as Service</h3>
+              <h3 className="text-xl font-semibold text-white">Web as Service</h3>
             </div>
-            <p className="text-gray-600 mb-6">Transform your web presence with our comprehensive Web as Service platform that streamlines development and hosting.</p>
+            <p className="text-white mb-6">Transform your web presence with our comprehensive Web as Service platform that streamlines development and hosting.</p>
             <ul className="space-y-3">
               <li className="flex items-start">
                 <Check className="h-5 w-5 text-green-500 mr-2 mt-0.5 flex-shrink-0" />
@@ -42,14 +41,14 @@ const WhyChooseSection = () => {
             </ul>
           </div>
 
-          <div className="bg-gray-50 rounded-xl p-8 shadow-sm hover:shadow-md transition-shadow">
+          <div className="bg-[#A4BE7B] rounded-xl p-8 shadow-sm hover:shadow-md transition-shadow">
             <div className="flex items-center mb-4">
-              <div className="bg-purple-100 p-3 rounded-lg mr-4">
-                <Zap className="h-6 w-6 text-purple-600" />
+              <div className="bg-[#E5D9B6] p-3 rounded-lg mr-4">
+                <Zap className="h-6 w-6 text-[#5F8D4E]" />
               </div>
-              <h3 className="text-xl font-semibold">Software as Service</h3>
+              <h3 className="text-xl font-semibold text-white">Software as Service</h3>
             </div>
-            <p className="text-gray-600 mb-6">Empower your business with custom software solutions without the need for complex coding or development expertise.</p>
+            <p className="text-white mb-6">Empower your business with custom software solutions without the need for complex coding or development expertise.</p>
             <ul className="space-y-3">
               <li className="flex items-start">
                 <Check className="h-5 w-5 text-green-500 mr-2 mt-0.5 flex-shrink-0" />
@@ -70,14 +69,14 @@ const WhyChooseSection = () => {
             </ul>
           </div>
           
-          <div className="bg-gray-50 rounded-xl p-8 shadow-sm hover:shadow-md transition-shadow">
+          <div className="bg-[#A4BE7B] rounded-xl p-8 shadow-sm hover:shadow-md transition-shadow">
             <div className="flex items-center mb-4">
-              <div className="bg-purple-100 p-3 rounded-lg mr-4">
-                <Bot className="h-6 w-6 text-purple-600" />
+              <div className="bg-[#E5D9B6] p-3 rounded-lg mr-4">
+                <Bot className="h-6 w-6 text-[#5F8D4E]" />
               </div>
-              <h3 className="text-xl font-semibold">AI Agent</h3>
+              <h3 className="text-xl font-semibold text-white">AI Agent</h3>
             </div>
-            <p className="text-gray-600 mb-6">Leverage intelligent AI agents to automate tasks, provide insights, and enhance decision-making across your organization.</p>
+            <p className="text-white mb-6">Leverage intelligent AI agents to automate tasks, provide insights, and enhance decision-making across your organization.</p>
             <ul className="space-y-3">
               <li className="flex items-start">
                 <Check className="h-5 w-5 text-green-500 mr-2 mt-0.5 flex-shrink-0" />

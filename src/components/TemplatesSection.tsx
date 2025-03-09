@@ -64,25 +64,25 @@ const TemplatesSection = () => {
   const filteredTemplates = selectedCategory === "all" ? templates : templates.filter(template => template.category === selectedCategory);
 
   return (
-    <section className="py-20 bg-white">
+    <section className="py-20 bg-[#A4BE7B]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
-          <h2 className="text-3xl font-bold text-gray-900 mb-4">Ready-to-Use Templates</h2>
-          <p className="text-xl text-gray-600 max-w-2xl mx-auto">
+          <h2 className="text-3xl font-bold text-white mb-4">Ready-to-Use Templates</h2>
+          <p className="text-xl text-gray-100 max-w-2xl mx-auto">
             Browse our collection of professionally designed templates to kickstart your next project
           </p>
         </div>
 
         <div className="flex justify-center mb-12">
-          <div className="inline-flex p-1 bg-gray-100 rounded-lg">
-            <button onClick={() => setSelectedCategory("all")} className={`px-6 py-2 rounded-md text-sm font-medium transition-colors ${selectedCategory === "all" ? "bg-purple-600 text-white" : "text-gray-700 hover:bg-gray-200"}`}>
+          <div className="inline-flex p-1 bg-[#E5D9B6] rounded-lg">
+            <button onClick={() => setSelectedCategory("all")} className={`px-6 py-2 rounded-md text-sm font-medium transition-colors ${selectedCategory === "all" ? "bg-[#557153] text-white" : "text-gray-700 hover:bg-[#C9D7A8]"}`}>
               All Templates
             </button>
-            <button onClick={() => setSelectedCategory("website")} className={`px-6 py-2 rounded-md text-sm font-medium transition-colors ${selectedCategory === "website" ? "bg-purple-600 text-white" : "text-gray-700 hover:bg-gray-200"}`}>
+            <button onClick={() => setSelectedCategory("website")} className={`px-6 py-2 rounded-md text-sm font-medium transition-colors ${selectedCategory === "website" ? "bg-[#557153] text-white" : "text-gray-700 hover:bg-[#C9D7A8]"}`}>
               <Globe className="inline mr-1 h-4 w-4" />
               Websites
             </button>
-            <button onClick={() => setSelectedCategory("application")} className={`px-6 py-2 rounded-md text-sm font-medium transition-colors ${selectedCategory === "application" ? "bg-purple-600 text-white" : "text-gray-700 hover:bg-gray-200"}`}>
+            <button onClick={() => setSelectedCategory("application")} className={`px-6 py-2 rounded-md text-sm font-medium transition-colors ${selectedCategory === "application" ? "bg-[#557153] text-white" : "text-gray-700 hover:bg-[#C9D7A8]"}`}>
               <Laptop className="inline mr-1 h-4 w-4" />
               Applications
             </button>

@@ -1,27 +1,26 @@
-
 import React from 'react';
 import { Layout, Database, Bot, PenTool, Code, Cloud, Zap, Users, Clock, MessageSquare, Server, Shield, ArrowRight } from 'lucide-react';
 
 const ServicesSection = () => {
   return (
-    <section className="py-20 bg-gray-50">
+    <section className="py-20 bg-[#5F8D4E]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
-          <h2 className="text-3xl font-bold text-gray-900 mb-4">Our Services</h2>
-          <p className="text-xl text-gray-600 max-w-2xl mx-auto">
+          <h2 className="text-3xl font-bold text-white mb-4">Our Services</h2>
+          <p className="text-xl text-gray-100 max-w-2xl mx-auto">
             Explore our comprehensive suite of services designed to empower businesses and individuals alike.
           </p>
         </div>
         
         <div className="grid md:grid-cols-3 gap-8">
-          <div className="bg-white rounded-xl p-8 shadow-lg hover:shadow-xl transition-shadow">
+          <div className="bg-[#A4BE7B] rounded-xl p-8 shadow-lg hover:shadow-xl transition-shadow">
             <div className="flex items-center mb-6">
-              <div className="bg-purple-100 p-4 rounded-full mr-4">
-                <Layout className="h-8 w-8 text-purple-600" />
+              <div className="bg-[#E5D9B6] p-4 rounded-full mr-4">
+                <Layout className="h-8 w-8 text-[#557153]" />
               </div>
-              <h3 className="text-2xl font-semibold">Web as Service</h3>
+              <h3 className="text-2xl font-semibold text-white">Web as Service</h3>
             </div>
-            <p className="text-gray-600 mb-8 text-lg">
+            <p className="text-gray-100 mb-8 text-lg">
               Create stunning web experiences with our customizable templates and intuitive design tools.
             </p>
             
@@ -57,20 +56,20 @@ const ServicesSection = () => {
               </div>
             </div>
             
-            <button className="mt-8 bg-purple-600 text-white px-6 py-3 rounded-lg hover:bg-purple-700 transition-colors flex items-center w-full justify-center">
+            <button className="mt-8 bg-[#557153] text-white px-6 py-3 rounded-lg hover:bg-[#4A6741] transition-colors flex items-center w-full justify-center">
               Explore Web Services
               <ArrowRight className="ml-2 h-5 w-5" />
             </button>
           </div>
           
-          <div className="bg-white rounded-xl p-8 shadow-lg hover:shadow-xl transition-shadow">
+          <div className="bg-[#A4BE7B] rounded-xl p-8 shadow-lg hover:shadow-xl transition-shadow">
             <div className="flex items-center mb-6">
-              <div className="bg-purple-100 p-4 rounded-full mr-4">
-                <Database className="h-8 w-8 text-purple-600" />
+              <div className="bg-[#E5D9B6] p-4 rounded-full mr-4">
+                <Database className="h-8 w-8 text-[#557153]" />
               </div>
-              <h3 className="text-2xl font-semibold">Software as Service</h3>
+              <h3 className="text-2xl font-semibold text-white">Software as Service</h3>
             </div>
-            <p className="text-gray-600 mb-8 text-lg">
+            <p className="text-gray-100 mb-8 text-lg">
               Deploy ready-to-use applications tailored to specific business needs without technical expertise.
             </p>
             
@@ -106,20 +105,20 @@ const ServicesSection = () => {
               </div>
             </div>
             
-            <button className="mt-8 bg-purple-600 text-white px-6 py-3 rounded-lg hover:bg-purple-700 transition-colors flex items-center w-full justify-center">
+            <button className="mt-8 bg-[#557153] text-white px-6 py-3 rounded-lg hover:bg-[#4A6741] transition-colors flex items-center w-full justify-center">
               Explore Software Services
               <ArrowRight className="ml-2 h-5 w-5" />
             </button>
           </div>
           
-          <div className="bg-white rounded-xl p-8 shadow-lg hover:shadow-xl transition-shadow">
+          <div className="bg-[#A4BE7B] rounded-xl p-8 shadow-lg hover:shadow-xl transition-shadow">
             <div className="flex items-center mb-6">
-              <div className="bg-purple-100 p-4 rounded-full mr-4">
-                <Bot className="h-8 w-8 text-purple-600" />
+              <div className="bg-[#E5D9B6] p-4 rounded-full mr-4">
+                <Bot className="h-8 w-8 text-[#557153]" />
               </div>
-              <h3 className="text-2xl font-semibold">AI Agent</h3>
+              <h3 className="text-2xl font-semibold text-white">AI Agent</h3>
             </div>
-            <p className="text-gray-600 mb-8 text-lg">
+            <p className="text-gray-100 mb-8 text-lg">
               Leverage ready-made AI Agents to automate tasks, analyze data, and provide intelligent insights.
             </p>
             
@@ -155,7 +154,7 @@ const ServicesSection = () => {
               </div>
             </div>
             
-            <button className="mt-8 bg-purple-600 text-white px-6 py-3 rounded-lg hover:bg-purple-700 transition-colors flex items-center w-full justify-center">
+            <button className="mt-8 bg-[#557153] text-white px-6 py-3 rounded-lg hover:bg-[#4A6741] transition-colors flex items-center w-full justify-center">
               Explore AI Agents
               <ArrowRight className="ml-2 h-5 w-5" />
             </button>
