@@ -1,9 +1,7 @@
 import React from 'react';
 import { Cloud, Zap, Bot, Check, Clock, Users, Shield } from 'lucide-react';
-
 const WhyChooseSection = () => {
-  return (
-    <section className="py-20 bg-[#7D8F69]">
+  return <section className="py-20 bg-olive-400">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <h2 className="text-3xl font-bold text-white mb-4">Why Choose CitizenDeveloperApp</h2>
@@ -124,8 +122,6 @@ const WhyChooseSection = () => {
           </div>
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
-
 export default WhyChooseSection;
