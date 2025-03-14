@@ -24,10 +24,10 @@ const NavigationBar = () => {
           </div>
           <div className="hidden md:flex items-center space-x-8">
             <button 
-              onClick={() => scrollToSection('services-section')} 
+              onClick={() => scrollToSection('product-list-section')} 
               className="text-gray-600 hover:text-olive-500"
             >
-              Products
+              Product
             </button>
             <Link to="/" className="text-gray-600 hover:text-olive-500">Solutions</Link>
             <Link to="/" className="text-gray-600 hover:text-olive-500">Pricing</Link>
