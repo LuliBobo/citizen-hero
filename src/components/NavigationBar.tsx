@@ -29,8 +29,18 @@ const NavigationBar = () => {
             >
               Product
             </button>
-            <Link to="/" className="text-gray-600 hover:text-olive-500">Solutions</Link>
-            <Link to="/" className="text-gray-600 hover:text-olive-500">Pricing</Link>
+            <button 
+              onClick={() => scrollToSection('benefits-section')} 
+              className="text-gray-600 hover:text-olive-500"
+            >
+              Solutions
+            </button>
+            <button 
+              onClick={() => scrollToSection('templates-section')} 
+              className="text-gray-600 hover:text-olive-500"
+            >
+              Pricing
+            </button>
           </div>
           <div className="flex items-center space-x-4">
             {isAuthenticated ? (

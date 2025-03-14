@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 import { Star, Check, Globe, Laptop, ChevronLeft, ChevronRight } from 'lucide-react';
 
@@ -64,7 +63,7 @@ const TemplatesSection = () => {
   const filteredTemplates = selectedCategory === "all" ? templates : templates.filter(template => template.category === selectedCategory);
 
   return (
-    <section className="py-20 bg-[#A4BE7B]">
+    <section id="templates-section" className="py-20 bg-[#A4BE7B]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <h2 className="text-3xl font-bold text-white mb-4">Ready-to-Use Templates</h2>
