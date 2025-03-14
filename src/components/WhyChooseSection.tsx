@@ -102,7 +102,7 @@ const WhyChooseSection = () => {
               <Clock className="h-8 w-8 text-purple-600" />
             </div>
             <h3 className="text-lg font-semibold mb-2">Faster Time to Market</h3>
-            <p className="text-gray-600">Launch your digital solutions up to 80% faster than traditional development.</p>
+            <p className="text-zinc-50">Launch your digital solutions up to 80% faster than traditional development.</p>
           </div>
           
           <div className="text-center p-6">
@@ -110,7 +110,7 @@ const WhyChooseSection = () => {
               <Users className="h-8 w-8 text-purple-600" />
             </div>
             <h3 className="text-lg font-semibold mb-2">Empower Your Team</h3>
-            <p className="text-gray-600">Allow anyone in your organization to build and deploy solutions regardless of technical expertise.</p>
+            <p className="text-zinc-50">Allow anyone in your organization to build and deploy solutions regardless of technical expertise.</p>
           </div>
           
           <div className="text-center p-6">
@@ -118,7 +118,7 @@ const WhyChooseSection = () => {
               <Shield className="h-8 w-8 text-purple-600" />
             </div>
             <h3 className="text-lg font-semibold mb-2">Enterprise Security</h3>
-            <p className="text-gray-600">Rest easy with built-in security features that protect your applications and data.</p>
+            <p className="text-zinc-50">Rest easy with built-in security features that protect your applications and data.</p>
           </div>
         </div>
       </div>
