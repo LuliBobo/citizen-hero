@@ -1,3 +1,4 @@
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -98,6 +99,70 @@
   body {
     @apply bg-background text-foreground;
   }
+}
+
+/* Glow Button Styles */
+.glow-button {
+  background: linear-gradient(45deg, #9b87f5, #6E59A5);
+  color: white;
+  font-size: 18px;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  outline: none;
+  position: relative;
+  overflow: hidden;
+  transition: 0.3s;
+}
+
+/* Default shadow */
+.glow-button::before {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle, rgba(155, 135, 245, 0.4), transparent);
+  opacity: 0;
+  transition: opacity 0.3s ease-out;
+}
+
+/* Glow effect on hover */
+.glow-button:hover::before {
+  opacity: 1;
+}
+
+/* Moving light effect */
+.glow-button::after {
+  content: "";
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.6);
+  box-shadow: 0 0 20px 10px rgba(255, 255, 255, 0.4);
+  top: var(--y, 0);
+  left: var(--x, 0);
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  transition: opacity 0.2s;
+}
+
+.glow-button:hover::after {
+  opacity: 0.8;
+}
+
+/* Pulsing effect */
+@keyframes pulse {
+  0% { box-shadow: 0 0 10px rgba(155, 135, 245, 0.5); }
+  50% { box-shadow: 0 0 20px rgba(110, 89, 165, 0.8); }
+  100% { box-shadow: 0 0 10px rgba(155, 135, 245, 0.5); }
+}
+
+.glow-button:hover {
+  animation: pulse 1.5s infinite;
 }
 
 @keyframes textAnimation {

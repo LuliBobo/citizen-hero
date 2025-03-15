@@ -1,5 +1,7 @@
+
 import React, { useEffect, useRef } from 'react';
 import { ArrowRight } from 'lucide-react';
+import { Button } from './ui/button';
 
 const HeroSection = () => {
   const imageRef = useRef<HTMLImageElement>(null);
@@ -29,13 +31,13 @@ const HeroSection = () => {
             Transform your ideas into reality without writing a single line of code
           </p>
           <div className="flex justify-center space-x-4">
-            <button className="bg-purple-600 text-white px-8 py-3 rounded-lg hover:bg-purple-700 transition-colors flex items-center">
+            <Button variant="glow" className="flex items-center gap-2">
               Start monitoring now
               <ArrowRight className="ml-2 h-5 w-5" />
-            </button>
-            <button className="border border-gray-300 text-gray-700 px-8 py-3 rounded-lg hover:bg-gray-50 transition-colors">
+            </Button>
+            <Button variant="outline" className="border border-gray-300 text-gray-700 px-8 py-3 rounded-lg hover:bg-gray-50 transition-colors">
               Schedule demo
-            </button>
+            </Button>
           </div>
         </div>
         <div className="mt-16">

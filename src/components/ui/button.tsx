@@ -1,3 +1,4 @@
+
 import * as React from "react"
 import { Slot } from "@radix-ui/react-slot"
 import { cva, type VariantProps } from "class-variance-authority"
@@ -18,6 +19,7 @@ const buttonVariants = cva(
           "bg-secondary text-secondary-foreground hover:bg-secondary/80",
         ghost: "hover:bg-accent hover:text-accent-foreground",
         link: "text-primary underline-offset-4 hover:underline",
+        glow: "glow-button text-white relative overflow-hidden",
       },
       size: {
         default: "h-10 px-4 py-2",
@@ -42,6 +44,32 @@ export interface ButtonProps
 const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
   ({ className, variant, size, asChild = false, ...props }, ref) => {
     const Comp = asChild ? Slot : "button"
+    
+    React.useEffect(() => {
+      // Add mousemove event listener for glow buttons
+      if (variant === 'glow') {
+        const handleMouseMove = (e: MouseEvent) => {
+          const target = e.currentTarget as HTMLElement;
+          const rect = target.getBoundingClientRect();
+          const x = e.clientX - rect.left;
+          const y = e.clientY - rect.top;
+          target.style.setProperty('--x', `${x}px`);
+          target.style.setProperty('--y', `${y}px`);
+        };
+
+        const buttons = document.querySelectorAll('.glow-button');
+        buttons.forEach(button => {
+          button.addEventListener('mousemove', handleMouseMove);
+        });
+
+        return () => {
+          buttons.forEach(button => {
+            button.removeEventListener('mousemove', handleMouseMove);
+          });
+        };
+      }
+    }, [variant]);
+
     return (
       <Comp
         className={cn(buttonVariants({ variant, size, className }))}
