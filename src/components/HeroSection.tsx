@@ -1,11 +1,8 @@
-
 import React, { useEffect, useRef } from 'react';
 import { ArrowRight } from 'lucide-react';
 import { Button } from './ui/button';
-
 const HeroSection = () => {
   const imageRef = useRef<HTMLImageElement>(null);
-
   useEffect(() => {
     const handleScroll = () => {
       if (imageRef.current) {
@@ -19,9 +16,7 @@ const HeroSection = () => {
       window.removeEventListener('scroll', handleScroll);
     };
   }, []);
-
-  return (
-    <section id="hero-section" className="pt-32 pb-20 bg-gradient-to-b from-gray-50 to-white">
+  return <section id="hero-section" className="pt-32 pb-20 bg-gradient-to-b from-gray-50 to-white bg-slate-950">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center">
           <h1 className="text-5xl font-bold mb-6 animate-text gradient-text">
@@ -44,8 +39,6 @@ const HeroSection = () => {
           <img ref={imageRef} alt="Dashboard Preview" src="/lovable-uploads/1e7995b5-3727-416c-b64a-423be03ecad2.jpg" className="rounded-xl shadow-5xl scale-on-scroll object-scale-down" />
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
-
 export default HeroSection;
