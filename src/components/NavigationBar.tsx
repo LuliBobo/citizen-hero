@@ -27,7 +27,7 @@ const NavigationBar = () => {
             <button onClick={() => scrollToSection('product-list-section')} className="text-gray-600 hover:text-olive-500 bg-fuchsia-600 hover:bg-fuchsia-500">
               Product
             </button>
-            <button onClick={() => scrollToSection('benefits-section')} className="text-gray-600 hover:text-olive-500">
+            <button onClick={() => scrollToSection('benefits-section')} className="text-fuchsia-600">
               Solutions
             </button>
             <button onClick={() => scrollToSection('templates-section')} className="text-fuchsia-600">
