@@ -21,7 +21,7 @@ const NavigationBar = () => {
         <div className="flex justify-between items-center h-16 bg-slate-950">
           <div className="flex items-center cursor-pointer" onClick={() => scrollToSection('hero-section')}>
             <Server className="h-8 w-8 text-olive-500" />
-            <span className="ml-2 text-xl font-bold">CitizenDeveloperApp</span>
+            <span className="ml-2 text-xl font-bold text-fuchsia-600">CitizenDeveloperApp</span>
           </div>
           <div className="hidden md:flex items-center space-x-8">
             <button onClick={() => scrollToSection('product-list-section')} className="text-gray-600 hover:text-olive-500">
