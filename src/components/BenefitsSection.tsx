@@ -1,9 +1,7 @@
 import React from 'react';
 import { Layout, Database, Bot, Code, Clock, PenTool, Cloud, Users, Shield, Server, Zap, MessageSquare, ArrowRight } from 'lucide-react';
-
 const BenefitsSection = () => {
-  return (
-    <section id="benefits-section" className="py-20 bg-purple-50">
+  return <section id="benefits-section" className="py-20 bg-slate-950">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <h2 className="text-3xl font-bold text-gray-900 mb-4">Benefits of Our Services</h2>
@@ -177,8 +175,6 @@ const BenefitsSection = () => {
           </a>
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
-
 export default BenefitsSection;
