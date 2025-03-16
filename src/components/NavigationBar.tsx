@@ -24,7 +24,7 @@ const NavigationBar = () => {
             <span className="ml-2 text-xl font-bold text-fuchsia-600">CitizenDeveloperApp</span>
           </div>
           <div className="hidden md:flex items-center space-x-8">
-            <button onClick={() => scrollToSection('product-list-section')} className="text-gray-600 hover:text-olive-500">
+            <button onClick={() => scrollToSection('product-list-section')} className="text-gray-600 hover:text-olive-500 bg-fuchsia-600 hover:bg-fuchsia-500">
               Product
             </button>
             <button onClick={() => scrollToSection('benefits-section')} className="text-gray-600 hover:text-olive-500">
