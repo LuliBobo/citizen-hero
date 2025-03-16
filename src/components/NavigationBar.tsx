@@ -36,7 +36,7 @@ const NavigationBar = () => {
           </div>
           <div className="flex items-center space-x-4">
             {isAuthenticated ? <>
-                <span className="text-gray-600">Welcome, {user?.username}</span>
+                <span className="text-fuchsia-600">Welcome, {user?.username}</span>
                 <button onClick={logout} className="bg-olive-500 text-white px-4 py-2 rounded-lg hover:bg-olive-600 transition-colors">
                   Logout
                 </button>
