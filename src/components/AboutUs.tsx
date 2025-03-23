@@ -14,7 +14,7 @@ const AboutUs = () => {
           <div className="space-y-6">
             <h3 className="text-2xl font-bold text-purple-700">We are a very small efficient team with a large number of AI Agent helpers.</h3>
             
-            <p className="text-lg text-gray-600">
+            <p className="text-lg text-gray-100">
               At CitizenDeveloperApp, we believe in the power of combining human creativity with AI assistance. 
               Our lean team of experts works alongside advanced AI agents to deliver exceptional solutions that would 
               traditionally require teams many times our size.
