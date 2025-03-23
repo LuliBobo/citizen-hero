@@ -59,7 +59,7 @@ const TemplatesSection = () => {
   }];
   const filteredTemplates = selectedCategory === "all" ? templates : templates.filter(template => template.category === selectedCategory);
   return <section id="templates-section" className="py-20 bg-slate-950">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-[100px]">
         <div className="text-center mb-16">
           <h2 className="text-3xl font-bold text-white mb-4">Ready-to-Use Templates</h2>
           <p className="text-xl text-gray-100 max-w-2xl mx-auto">
