@@ -19,7 +19,7 @@ const HeroSection = () => {
   return <section id="hero-section" className="pt-32 pb-20 bg-gradient-to-b from-gray-50 to-white bg-slate-950 rounded-none py-0">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 bg-slate-950 py-[150px]">
         <div className="text-center bg-slate-950">
-          <h1 className="text-5xl font-bold mb-6 animate-text gradient-text">
+          <h1 className="font-bold mb-6 animate-text gradient-text text-7xl">
             Build Smarter, Launch Faster<br />with Citizen Developer App
           </h1>
           <p className="text-xl mb-8 max-w-2xl mx-auto text-gray-100">
