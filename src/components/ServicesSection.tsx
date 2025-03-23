@@ -1,10 +1,7 @@
-
 import React from 'react';
 import { Layout, Database, Bot, PenTool, Code, Cloud, Zap, Users, Clock, MessageSquare, Server, Shield, ArrowRight } from 'lucide-react';
-
 const ServicesSection = () => {
-  return (
-    <section id="services-section" className="py-20 bg-[#5F8D4E]">
+  return <section id="services-section" className="py-20 bg-slate-950">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <h2 className="text-3xl font-bold text-white mb-4">Our Services</h2>
@@ -162,8 +159,6 @@ const ServicesSection = () => {
           </div>
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
-
 export default ServicesSection;
