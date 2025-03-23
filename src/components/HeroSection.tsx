@@ -22,7 +22,7 @@ const HeroSection = () => {
           <h1 className="text-5xl font-bold mb-6 animate-text gradient-text">
             Build Smarter, Launch Faster<br />with Citizen Developer App
           </h1>
-          <p className="text-xl text-gray-600 mb-8 max-w-2xl mx-auto">
+          <p className="text-xl mb-8 max-w-2xl mx-auto text-gray-100">
             Transform your ideas into reality without writing a single line of code
           </p>
           <div className="flex justify-center space-x-4">
