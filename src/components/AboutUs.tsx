@@ -27,7 +27,7 @@ const AboutUs = () => {
                 </div>
                 <div>
                   <h4 className="text-lg font-semibold">Small but Mighty Team</h4>
-                  <p className="text-gray-600">Our streamlined team of developers, designers, and innovators brings decades of combined experience.</p>
+                  <p className="text-gray-100">Our streamlined team of developers, designers, and innovators brings decades of combined experience.</p>
                 </div>
               </div>
               
