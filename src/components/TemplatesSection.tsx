@@ -1,9 +1,7 @@
 import React, { useState } from 'react';
 import { Star, Check, Globe, Laptop, ChevronLeft, ChevronRight } from 'lucide-react';
-
 const TemplatesSection = () => {
   const [selectedCategory, setSelectedCategory] = useState<string>("all");
-
   const templates = [{
     id: 1,
     title: "E-commerce Starter",
@@ -59,11 +57,8 @@ const TemplatesSection = () => {
     price: 129,
     features: ["Contact Management", "Sales Pipeline", "Task Tracking", "Email Integration"]
   }];
-
   const filteredTemplates = selectedCategory === "all" ? templates : templates.filter(template => template.category === selectedCategory);
-
-  return (
-    <section id="templates-section" className="py-20 bg-[#A4BE7B]">
+  return <section id="templates-section" className="py-20 bg-slate-950">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <h2 className="text-3xl font-bold text-white mb-4">Ready-to-Use Templates</h2>
@@ -89,8 +84,7 @@ const TemplatesSection = () => {
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {filteredTemplates.map(template => (
-            <div key={template.id} className="bg-white rounded-xl shadow-md hover:shadow-xl transition-shadow overflow-hidden border border-gray-100">
+          {filteredTemplates.map(template => <div key={template.id} className="bg-white rounded-xl shadow-md hover:shadow-xl transition-shadow overflow-hidden border border-gray-100">
               <div className="h-48 overflow-hidden">
                 <img src={template.image} alt={template.title} className="w-full h-full object-cover transition-transform hover:scale-105" />
               </div>
@@ -111,12 +105,10 @@ const TemplatesSection = () => {
                 </div>
                 
                 <ul className="mb-6 space-y-2">
-                  {template.features.map((feature, idx) => (
-                    <li key={idx} className="flex items-start">
+                  {template.features.map((feature, idx) => <li key={idx} className="flex items-start">
                       <Check className="h-4 w-4 text-green-500 mr-2 mt-0.5" />
                       <span className="text-sm text-gray-700">{feature}</span>
-                    </li>
-                  ))}
+                    </li>)}
                 </ul>
                 
                 <div className="flex items-center justify-between">
@@ -126,12 +118,9 @@ const TemplatesSection = () => {
                   </button>
                 </div>
               </div>
-            </div>
-          ))}
+            </div>)}
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
-
 export default TemplatesSection;
