@@ -1,10 +1,7 @@
-
 import React from 'react';
 import { Users, Bot, Zap, Award, Lightbulb } from 'lucide-react';
-
 const AboutUs = () => {
-  return (
-    <section id="about-us" className="py-20 bg-[#E5D9B6]">
+  return <section id="about-us" className="py-20 bg-slate-950">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <h2 className="text-3xl font-bold text-gray-900 mb-4">About Us</h2>
@@ -61,11 +58,7 @@ const AboutUs = () => {
             <div className="absolute -bottom-6 -right-6 w-24 h-24 bg-purple-200 rounded-xl z-0"></div>
             
             <div className="relative z-10 bg-white rounded-xl shadow-xl overflow-hidden">
-              <img 
-                src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&q=80" 
-                alt="Our Team" 
-                className="w-full h-64 object-cover object-center"
-              />
+              <img src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&q=80" alt="Our Team" className="w-full h-64 object-cover object-center" />
               
               <div className="p-6 space-y-6">
                 <div className="flex items-center justify-between">
@@ -91,8 +84,6 @@ const AboutUs = () => {
           </div>
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
-
 export default AboutUs;
