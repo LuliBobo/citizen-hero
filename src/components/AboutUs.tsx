@@ -47,7 +47,7 @@ const AboutUs = () => {
                 </div>
                 <div>
                   <h4 className="text-lg font-semibold">Efficient Processes</h4>
-                  <p className="text-gray-600">Our streamlined workflows and AI integration allow us to deliver projects faster than traditional teams.</p>
+                  <p className="text-gray-100">Our streamlined workflows and AI integration allow us to deliver projects faster than traditional teams.</p>
                 </div>
               </div>
             </div>
