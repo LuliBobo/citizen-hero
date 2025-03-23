@@ -37,7 +37,7 @@ const AboutUs = () => {
                 </div>
                 <div>
                   <h4 className="text-lg font-semibold">AI-Powered Assistance</h4>
-                  <p className="text-gray-600">Our team is enhanced by intelligent AI agents that automate repetitive tasks and provide valuable insights.</p>
+                  <p className="text-gray-100">Our team is enhanced by intelligent AI agents that automate repetitive tasks and provide valuable insights.</p>
                 </div>
               </div>
               
