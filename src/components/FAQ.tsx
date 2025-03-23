@@ -59,7 +59,7 @@ const FAQ = () => {
         </div>
         
         <div className="text-center mt-12">
-          <p className="text-gray-600 mb-6">Still have questions? We're here to help.</p>
+          <p className="mb-6 text-gray-100">Still have questions? We're here to help.</p>
           <button className="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md shadow-sm text-white bg-purple-600 hover:bg-purple-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-purple-500">
             Contact Support
           </button>
