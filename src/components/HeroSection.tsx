@@ -16,7 +16,7 @@ const HeroSection = () => {
       window.removeEventListener('scroll', handleScroll);
     };
   }, []);
-  return <section id="hero-section" className="pt-32 pb-20 bg-gradient-to-b from-gray-50 to-white bg-slate-950 rounded-none py-[80px]">
+  return <section id="hero-section" className="pt-32 pb-20 bg-gradient-to-b from-gray-50 to-white bg-slate-950 rounded-none py-0">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 bg-slate-950 py-[120px]">
         <div className="text-center bg-slate-950">
           <h1 className="text-5xl font-bold mb-6 animate-text gradient-text">
